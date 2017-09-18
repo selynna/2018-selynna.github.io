@@ -73,6 +73,7 @@ body {
     text-align: center;
     width: 400px;
     height: 260px;
+    position: relative;
     background-color: #444;
     background-size: contain;
     background-repeat: no-repeat;
@@ -87,12 +88,12 @@ body {
     top: 0;
     left: 0;
     position: absolute;
-    background: #fff;
+    background: #000;
     opacity: 0;
 }
 
 .pcard:hover:after {
-    opacity: 1;
+    opacity: 0.8;
 }
 
 #intuit {
