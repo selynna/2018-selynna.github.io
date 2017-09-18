@@ -3,7 +3,6 @@ html, body {
   margin: 0;
   padding: 0;
   min-height: 100%;
-  min-height: 100vh;
   min-width: 100%; }
 
 body {
@@ -30,6 +29,8 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: column; }
+  .landing-container h1, .landing-container p {
+    margin: 0; }
 
 .xp {
   background-color: #eee;
@@ -50,9 +51,11 @@ body {
 .pcard {
   margin: 25px 25px;
   text-align: center;
-  background-color: #444;
   width: 400px;
   height: 260px;
+  background-color: #444;
+  background-size: contain;
+  background-repeat: no-repeat;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
 
 .pcard:after {
@@ -68,17 +71,35 @@ body {
 .pcard:hover:after {
   opacity: 1; }
 
+#intuit {
+  background-image: url("../img/mint1.png"); }
+
+#lah {
+  background-image: url("../img/lah.png"); }
+
+#hsh {
+  background-image: url("../img/hsh.png"); }
+
 .footer {
-  height: 70px; }
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .footer p {
+    text-align: center;
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 16px;
+    color: #bbb;
+    padding-bottom: 20px; }
   .footer .icons {
-    height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    padding-top: 15px; }
   .footer .icons i {
-    margin-left: 15px;
-    margin-right: 15px;
+    padding: 15px 15px;
     color: #bbb;
     font-size: 24px; }
   .footer .icons i:hover {
