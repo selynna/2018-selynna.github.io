@@ -8,7 +8,7 @@ html, body {
     margin: 0;
     padding: 0;
     min-height: 100%;
-    // min-height: 100vh;
+    //min-height: 100vh;
     min-width: 100%;
 }
 
@@ -34,6 +34,19 @@ body {
 .landing {
     display: flex;
     justify-content: center;
+}
+
+.construct {
+   height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Roboto, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 72px;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .landing-container {
@@ -94,6 +107,10 @@ body {
 
 .pcard:hover:after {
     opacity: 0.8;
+}
+
+.pcard:hover {
+    transform: scale(1.1);
 }
 
 #intuit {
