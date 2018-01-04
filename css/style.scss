@@ -1,160 +1,95 @@
-@import url("reset.scss");
-
-// * {
-//    box-sizing: border-box;
-// }
-
-html, body {
-    margin: 0;
-    padding: 0;
-    min-height: 100%;
-    //min-height: 100vh;
-    min-width: 100%;
+html {
+   margin: 0;
+   padding: 0;
+   min-height: 100%;
+   min-width: 100%;
+   font-family: 'Avenir', Arial, sans-serif;
 }
 
 body {
-    color: #fff;
-    background-color: #252734;
-}
-
-.landing-container, .xp-container {
-    margin-left: auto;
-    margin-right: auto;
-    font-family: Roboto, Arial, sans-serif;
-    font-weight: 300;
-    font-size: 24px;
-
-    h1 {
-        font-family: "Montserrat", sans-serif;
-        font-weight: 500;  
-        font-size: 72px;
-    }
+   background-color: #eff2f1;
+   color: #425059;
+   font-size: 1.1rem;
 }
 
 .landing {
-    display: flex;
-    justify-content: center;
+   margin: 3rem 3rem 0 3rem;
+
+   h1 {
+      font-size: 3rem;
+   }
 }
 
-.construct {
-   height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Roboto, Arial, sans-serif;
-    font-weight: 700;
-    font-size: 72px;
-    align-content: center;
-    margin-left: auto;
-    margin-right: auto;
+a {
+   color: #008080;
+   text-decoration: none;
+   font-weight: bold;
+
+   &:hover {
+      color: #009fa0;
+   }
 }
 
-.landing-container {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    h1, p {
-        margin: 0;
-    }
+.container {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+
+   .info, .xp {
+      margin: 0 3rem;
+      flex: 1 1 0;
+
+      h2 {
+         margin: 0;
+      }
+
+   }
 }
 
-.xp {
-    background-color: #eee;
-    color: #393b48;
+@media (max-width: 768px) {
+   body {
+      max-width: 768px;
+   }
 
-    .xp-container {
-        padding-top: 50px;
-        padding-bottom: 50px;
-        width: 80%;
-        h1 {
-            text-align: center;
-            font-size: 48px;
-            padding-bottom: 15px;
-        }
+   .landing {
+      margin: 3rem 2rem 0 2rem;
+      h1 {
+         font-size: 2.5rem;
+      }
+   }
 
-        .card-container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-    }
-}
+   .container {
+      display: flex;
+      flex-direction: column;
 
-.pcard {
-    margin: 25px 25px;
-    text-align: center;
-    width: 400px;
-    height: 260px;
-    position: relative;
-    background-color: #444;
-    background-size: contain;
-    background-repeat: no-repeat;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
-}
-
-.pcard:after {
-    content: '\A';
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    position: absolute;
-    background: #000;
-    opacity: 0;
-}
-
-.pcard:hover:after {
-    opacity: 0.8;
-}
-
-.pcard:hover {
-    transform: scale(1.1);
-}
-
-#intuit {
-    background-image: url("../img/mint1.png");
-}
-
-#lah {
-    background-image: url("../img/lah.png");
-}
-
-#hsh {
-    background-image: url("../img/hsh.png");
+      .info, .xp {
+         margin: 0 2rem;
+      }
+   }
 }
 
 .footer {
-    height: 80px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   bottom: 0;
 
-    p {
-        text-align: center;
-        font-family: Roboto;
-        font-weight: 300;
-        font-size: 16px;
-        color: #bbb;
-        padding-bottom: 20px;
-    }
+   .icons {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 15px;
+   }
 
-    .icons {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-top: 15px;
-    }
+   .icons i {
+      padding: 1rem 1rem;
+      color: #425059;
+      font-size: 24px;
+   }
 
-    .icons i {
-        padding: 15px 15px;
-        color: #bbb;
-        font-size: 24px;
-    }
-
-    .icons i:hover {
-        color: #eee;
-    }
+   .icons i:hover {
+      color: #bbb;
+   }
 }
